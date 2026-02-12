@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Scout</title>
+    <style>
+        nav { background: #333; padding: 1rem; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; }
+        .main-container { padding: 20px; font-family: sans-serif; }
+        .car-list { list-style: none; padding: 0; }
+        .card { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/compare">Compare Cars</a>
+    </nav>
+
+    <div class="main-container">
+        {{ template "content" . }}
+    </div>
+
+    <footer>
+        <p>© 2026 Car Comparison Test</p>
+    </footer>
+</body>
+</html>

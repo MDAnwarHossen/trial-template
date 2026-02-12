@@ -1,0 +1,7 @@
+{{ define "content" }}
+    <ul class="car-list">
+      {{ range .Cars }}
+        {{ template "car-card" . }}
+      {{ end }}
+    </ul>
+{{ end }}
