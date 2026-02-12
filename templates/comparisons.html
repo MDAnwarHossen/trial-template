@@ -1,5 +1,21 @@
 {{ define "content" }}
-    <h1 class="title">Car Comparison</h1>
+<h1 class="title">Car Comparison</h1>
+{{ if not .Models }}
+  <p>No cars selected for comparison.</p>
+{{ else }}
+  <div class="comparison-table-wrapper">
     <table class="comparison-table">
-        </table>
+      <tbody>
+        {{range .Models}}
+        <tr>
+          <td>{{.Name}}</td>
+          <td>{{.Year}}</td>
+          <td>{{.Specifications.Engine}}</td>
+          <td><button class="btn">Remove</button></td>
+        </tr>
+        {{end}}
+      </tbody>
+    </table>
+  </div>
+{{ end }}
 {{ end }}
